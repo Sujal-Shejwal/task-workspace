@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Workspace</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<main class="workspace">
+  <header class="workspace-header">
+    <div>
+      <h1>Task Workspace</h1>
+      <p>Plan tasks and track time</p>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button id="themeToggle" class="theme-btn">🌙 Dark</button>
+  </header>
+
+  <!-- Task Counter -->
+  <div class="task-counter" id="taskCounter">
+    Total: 0 | Completed: 0 | Pending: 0
+  </div>
+
+  <!-- Header -->
+  <div class="table header">
+    <div>Task</div>
+    <div>Days</div>
+    <div>Hours</div>
+    <div>Minutes / Sec</div>
+    <div>Status</div>
+    <div>Actions</div>
+  </div>
+
+  <!-- Input row -->
+  <form class="table input-row" id="taskForm">
+    <input id="taskInput" type="text" placeholder="Write your task" required />
+    <input id="dayInput" type="number" min="0" />
+    <input id="hourInput" type="number" min="0" />
+    <input id="minuteInput" type="number" min="0" />
+    <div class="status">—</div>
+    <button id="addBtn" type="submit">Add</button>
+  </form>
+
+  <!-- Tasks -->
+  <div id="taskList"></div>
+
+  <footer class="footer">
+    Task Workspace • Vanilla JavaScript
+  </footer>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
